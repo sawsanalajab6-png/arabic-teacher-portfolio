@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>بورتفوليو معلمة اللغة العربية</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- AOS Animation CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 
 <body>
 
   <!-- 🔹 شريط التنقل -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm py-3">
     <div class="container">
       <a class="navbar-brand fw-bold text-danger" href="index.html">معلمة اللغة العربية</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -29,23 +41,67 @@
     </div>
   </nav>
 
-
   <!-- 🔹 قسم التعريف -->
-  <section class="hero d-flex align-items-center text-center">
+  <section class="hero d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up">
     <div class="container">
       <img src="images/teacher.jpg" alt="صورة المعلمة" class="rounded-circle mb-3" width="150" height="150">
       <h1 class="fw-bold text-danger">أهلاً أنا سوسن 🌸</h1>
       <p class="lead mb-4">معلمة لغة عربية شغوفة بتبسيط قواعد اللغة، وتعليمها بطريقة ممتعة وسهلة ❤️</p>
-      <a href="courses.html" class="btn btn-danger px-4">اكتشف الدورات</a>
+      <a href="courses.html" class="btn btn-danger px-4 py-2">اكتشف الدورات</a>
+    </div>
+  </section>
+
+  <!-- 🔹 قسم الآراء (مثال على تأثيرات الحركة) -->
+  <section class="py-5 bg-light">
+    <div class="container" data-aos="fade-up">
+      <h2 class="text-center mb-5 fw-bold text-danger">آراء الطلاب</h2>
+      <div class="row g-4">
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text">"سوسن تجعل تعلم اللغة العربية ممتعًا وسهل الفهم، أنصح بها بشدة!"</p>
+              <h6 class="fw-bold mb-0">– ليلى</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text">"طرقها التعليمية مبتكرة وتساعد على فهم القواعد بسهولة." </p>
+              <h6 class="fw-bold mb-0">– أحمد</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <p class="card-text">"أفضل معلمة لغة عربية واجهتها، ممتعة وصبورة جدًا." </p>
+              <h6 class="fw-bold mb-0">– ريم</h6>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- 🔹 الفوتر -->
-  <footer class="text-center py-3 bg-light mt-5 shadow-sm">
+  <footer class="text-center py-3 shadow-sm">
     <p class="mb-0">© 2025 جميع الحقوق محفوظة | معلمة اللغة العربية - سوسن</p>
   </footer>
 
+  <!-- Bootstrap JS & AOS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
 </body>
 </html>
